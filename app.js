@@ -19,6 +19,47 @@ const markup = {
         },
       ],
     },
+    {
+      type: "aside",
+      children: [
+        {
+          type: "p",
+          children: [
+            {
+              type: "text",
+              value: "Clicked : ",
+            },
+            {
+              type: "strong",
+              children: [
+                {
+                  type: "em",
+                  children: [
+                    {
+                      type: "text",
+                      value: "1 ",
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              type: "text",
+              value: "times",
+            },
+          ],
+        },
+        {
+          type: "button",
+          children: [
+            {
+              type: "text",
+              value: "Click Me!",
+            },
+          ],
+        },
+      ],
+    },
   ],
 };
 
