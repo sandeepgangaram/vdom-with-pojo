@@ -10,6 +10,15 @@ const markup = {
         },
       ],
     },
+    {
+      type: "h2",
+      children: [
+        {
+          type: "text",
+          value: "It Works!",
+        },
+      ],
+    },
   ],
 };
 
@@ -31,3 +40,5 @@ const makeElements = function (pojoElement, parentNode) {
 
   parentNode.appendChild(newNode);
 };
+
+makeElements(markup, rootElement);
