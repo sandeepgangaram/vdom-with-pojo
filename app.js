@@ -77,7 +77,7 @@ const makeElements = function (pojoElement, parentNode) {
     });
   }
 
-  console.log(newNode);
+  // console.log(newNode);
 
   parentNode.appendChild(newNode);
 };
