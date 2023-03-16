@@ -1,3 +1,6 @@
+const constantNode = document.getElementById("main");
+constantNode.style.backgroundColor = "skyblue";
+
 const rootNode = document.getElementById("root");
 const root = ReactDOM.createRoot(rootNode);
 root.render(React.createElement(App));
