@@ -11,3 +11,15 @@ function App() {
     React.createElement("button", null, "Click Me!")
   );
 }
+
+const articleElements = document.getElementsByTagName("aside");
+const articleElement = document.getElementsByTagName("aside")[0];
+console.log(articleElements);
+console.log(articleElement);
+
+setTimeout(() => {
+  const articleElements = document.getElementsByTagName("aside");
+  const articleElement = document.getElementsByTagName("aside")[0];
+  console.log(articleElements);
+  console.log(articleElement);
+}, 500);
