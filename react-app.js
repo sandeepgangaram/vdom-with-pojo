@@ -1,5 +1,8 @@
 const constantNode = document.getElementById("main");
 constantNode.style.backgroundColor = "skyblue";
+constantNode.addEventListener("mouseover", function () {
+  this.style.backgroundColor = "grey";
+});
 
 const rootNode = document.getElementById("root");
 const root = ReactDOM.createRoot(rootNode);
