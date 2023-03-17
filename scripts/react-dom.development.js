@@ -6394,8 +6394,9 @@
       case OffscreenLane:
         return OffscreenLane;
 
-      default: // This shouldn't be reachable, but as a fallback, return the entire bitmask.
+      default:
         {
+          // This shouldn't be reachable, but as a fallback, return the entire bitmask.
           error("Should have found matching lanes. This is a bug in React.");
         }
 
@@ -13157,10 +13158,16 @@
     var parentNode;
 
     if (container.nodeType === COMMENT_NODE) {
+      console.log("Inserting child in container");
+      console.log(child);
       parentNode = container.parentNode;
       parentNode.insertBefore(child, container);
     } else {
       parentNode = container;
+      console.log("Appending child to container");
+      console.log(child);
+      console.log("The container is...");
+      console.log(parentNode);
       parentNode.appendChild(child);
     } // This container might be used for a portal.
     // If something inside a portal is clicked, that click should bubble

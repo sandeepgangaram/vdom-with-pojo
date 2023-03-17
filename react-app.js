@@ -18,14 +18,14 @@ function App() {
   );
 }
 
-const articleElements = document.getElementsByTagName("aside");
-const articleElement = document.getElementsByTagName("aside")[0];
-console.log(articleElements);
-console.log(articleElement);
+// const articleElements = document.getElementsByTagName("aside");
+// const articleElement = document.getElementsByTagName("aside")[0];
+// console.log(articleElements);
+// console.log(articleElement);
 
-setTimeout(() => {
-  const articleElements = document.getElementsByTagName("aside");
-  const articleElement = document.getElementsByTagName("aside")[0];
-  console.log(articleElements);
-  console.log(articleElement);
-}, 500);
+// setTimeout(() => {
+//   const articleElements = document.getElementsByTagName("aside");
+//   const articleElement = document.getElementsByTagName("aside")[0];
+//   console.log(articleElements);
+//   console.log(articleElement);
+// }, 500);
