@@ -10,7 +10,16 @@ root.render(React.createElement(App));
 
 function App() {
   return React.createElement(
-    "aside",
+    "section",
+    null,
+    React.createElement("h2", null, "Counters"),
+    React.createElement("section", null, React.createElement(Counter))
+  );
+}
+
+function Counter() {
+  return React.createElement(
+    "article",
     null,
     React.createElement("h2", null, "Counter"),
     React.createElement("p", null, "Clicked 1 times"),
