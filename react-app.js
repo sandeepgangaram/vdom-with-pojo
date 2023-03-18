@@ -6,6 +6,7 @@ constantNode.addEventListener("mouseover", function () {
 
 const rootNode = document.getElementById("root");
 const root = ReactDOM.createRoot(rootNode);
+let counterName = "One";
 root.render(React.createElement(App));
 
 function App() {
@@ -13,26 +14,28 @@ function App() {
     "section",
     null,
     React.createElement("h2", null, "Counters"),
-    React.createElement(
-      "section",
-      null,
-      React.createElement(Counter, { name: "One" })
-    ),
-    React.createElement(
-      "section",
-      null,
-      React.createElement(Counter, { name: "Two" })
-    )
+    counterName === "One"
+      ? React.createElement("section", null, React.createElement(Counter1))
+      : React.createElement("section", null, React.createElement(Counter2))
   );
 }
 
-function Counter(props) {
-  props.name = "Oops";
+function Counter1(props) {
   return React.createElement(
     "article",
     null,
-    React.createElement("h2", null, "Counter ", props.name),
+    React.createElement("h2", null, "Counter One "),
     React.createElement("p", null, "Clicked 1 times"),
+    React.createElement("button", null, "Click Me!")
+  );
+}
+
+function Counter2(props) {
+  return React.createElement(
+    "article",
+    null,
+    React.createElement("h2", null, "Counter Two ", props.name),
+    React.createElement("p", null, "Counter Value is 1"),
     React.createElement("button", null, "Click Me!")
   );
 }
