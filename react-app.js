@@ -26,7 +26,11 @@ function Counter1(props) {
     null,
     React.createElement("h2", null, "Counter One "),
     React.createElement("p", null, "Clicked 1 times"),
-    React.createElement("button", null, "Click Me!")
+    React.createElement(
+      "button",
+      { className: "button", type: "button" },
+      "Click Me!"
+    )
   );
 }
 
@@ -36,7 +40,11 @@ function Counter2(props) {
     null,
     React.createElement("h2", null, "Counter Two ", props.name),
     React.createElement("p", null, "Counter Value is 1"),
-    React.createElement("button", null, "Click Me!")
+    React.createElement(
+      "button",
+      { className: "button", type: "button" },
+      "Click Me!"
+    )
   );
 }
 
