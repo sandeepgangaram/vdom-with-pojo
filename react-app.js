@@ -27,7 +27,7 @@ function App() {
 }
 
 function Counter(props) {
-  props.name = "False";
+  props.name = "Oops";
   return React.createElement(
     "article",
     null,
