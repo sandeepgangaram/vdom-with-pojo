@@ -13,6 +13,7 @@ function App() {
     "section",
     null,
     React.createElement("h2", null, "Counters"),
+    React.createElement("section", null, React.createElement(Counter)),
     React.createElement("section", null, React.createElement(Counter))
   );
 }
