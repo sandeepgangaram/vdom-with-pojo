@@ -13,16 +13,25 @@ function App() {
     "section",
     null,
     React.createElement("h2", null, "Counters"),
-    React.createElement("section", null, React.createElement(Counter)),
-    React.createElement("section", null, React.createElement(Counter))
+    React.createElement(
+      "section",
+      null,
+      React.createElement(Counter, { name: "One" })
+    ),
+    React.createElement(
+      "section",
+      null,
+      React.createElement(Counter, { name: "Two" })
+    )
   );
 }
 
-function Counter() {
+function Counter(props) {
+  props.name = "False";
   return React.createElement(
     "article",
     null,
-    React.createElement("h2", null, "Counter"),
+    React.createElement("h2", null, "Counter ", props.name),
     React.createElement("p", null, "Clicked 1 times"),
     React.createElement("button", null, "Click Me!")
   );
