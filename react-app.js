@@ -40,6 +40,12 @@ function Counter2(props) {
   );
 }
 
+function rerender() {
+  console.log("Rerendering....");
+  counterName = "Two";
+  root.render(React.createElement(App));
+}
+
 // const articleElements = document.getElementsByTagName("aside");
 // const articleElement = document.getElementsByTagName("aside")[0];
 // console.log(articleElements);
