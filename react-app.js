@@ -10,21 +10,23 @@ let counterName = "One";
 root.render(React.createElement(App));
 
 function App() {
+  const counter1 = <Counter1 name={counterName} />;
+  const counter2 = <Counter2 name={counterName} />;
   return (
     <section>
       <h2>Counters</h2>
       <section>
         Counter
-        <Counter1 />
+        {counterName === "One" ? counter1 : counter2}
       </section>
     </section>
   );
 }
 
-function Counter1() {
+function Counter1({ name }) {
   return (
     <article>
-      <h2>Counter One</h2>
+      <h2>Counter {name}</h2>
       <p>Clicked 1 times</p>
       <button className="button" type="button">
         Click Me!
@@ -33,17 +35,15 @@ function Counter1() {
   );
 }
 
-function Counter2(props) {
-  return React.createElement(
-    "article",
-    null,
-    React.createElement("h2", null, "Counter Two ", props.name),
-    React.createElement("p", null, "Counter Value is 1"),
-    React.createElement(
-      "button",
-      { className: "button", type: "button" },
-      "Click Me!"
-    )
+function Counter2({ name }) {
+  return (
+    <article>
+      <h2>Counter {name}</h2>
+      <p>Times Clicked : 1</p>
+      <button className="button" type="button">
+        Click Me!
+      </button>
+    </article>
   );
 }
 
