@@ -10,27 +10,26 @@ let counterName = "One";
 root.render(React.createElement(App));
 
 function App() {
-  return React.createElement(
-    "section",
-    null,
-    React.createElement("h2", null, "Counters"),
-    counterName === "One"
-      ? React.createElement("section", null, React.createElement(Counter1))
-      : React.createElement("section", null, React.createElement(Counter2))
+  return (
+    <section>
+      <h2>Counters</h2>
+      <section>
+        Counter
+        <Counter1 />
+      </section>
+    </section>
   );
 }
 
-function Counter1(props) {
-  return React.createElement(
-    "article",
-    null,
-    React.createElement("h2", null, "Counter One "),
-    React.createElement("p", null, "Clicked 1 times"),
-    React.createElement(
-      "button",
-      { className: "button", type: "button" },
-      "Click Me!"
-    )
+function Counter1() {
+  return (
+    <article>
+      <h2>Counter One</h2>
+      <p>Clicked 1 times</p>
+      <button className="button" type="button">
+        Click Me!
+      </button>
+    </article>
   );
 }
 
