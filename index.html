@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>React-BTS</title>
+    <style>
+      .render {
+        padding: 1rem 2rem;
+        color: white;
+        background-color: rgb(78, 2, 78);
+      }
+    </style>
   </head>
   <body>
     <main id="main">
@@ -12,7 +19,7 @@
     </main>
     <div id="root"></div>
     <p>
-      <button onclick="rerender()">Update</button>
+      <button class="render" onclick="rerender()">Update</button>
     </p>
     <script src="scripts/react.development.js"></script>
     <script src="scripts/react-dom.development.js"></script>
