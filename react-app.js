@@ -15,10 +15,7 @@ function App() {
   return (
     <section>
       <h2>Counters</h2>
-      <section>
-        Counter
-        {counterName === "One" ? counter1 : counter2}
-      </section>
+      <section>{counterName === "One" ? counter1 : counter2}</section>
     </section>
   );
 }
