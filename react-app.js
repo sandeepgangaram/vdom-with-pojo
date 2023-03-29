@@ -7,7 +7,7 @@ constantNode.addEventListener("mouseover", function () {
 const rootNode = document.getElementById("root");
 const root = ReactDOM.createRoot(rootNode);
 let counterName = "One";
-root.render(React.createElement(App));
+root.render(<App/>);
 
 function App() {
   const counter1 = <Counter1 name={counterName} />;
